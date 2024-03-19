@@ -11,9 +11,9 @@ Library    BuiltIn
 
 *** Variables ***
 
-${MyHostname}    desktopj93k2ev
-# ${MyHostname}    demo5757
-${MyRepositoryName}    TMUPLOADERV497TC2049
+# ${MyHostname}    desktopj93k2ev
+${MyHostname}    demo5757
+${MyRepositoryName}    TMUPLOADERV497TC4166
 # You must create the folder "MyFolderWorkspace" manually in the computer of Jenkins master, in case you test the script with the computer of Jenkins master
 ${MyFolderWorkspace}    C:/000/jenkins/workspace
 
@@ -433,7 +433,8 @@ Test10
     Run Keyword And Ignore Error    Wait Until Created    C:\\temp\\zUpload\\TestOK.txt    50s
     ${fileExists} =    Run Keyword And Return Status    File Should Exist    C:\\temp\\zUpload\\TestFailed.txt
     Log    ${fileExists}
-    Run Keyword If    '${fileExists}' == 'True'    Run    C:\\000\\jenkins\\script\\UploadData1.au3
+    # Run Keyword If    '${fileExists}' == 'True'    Run    C:\\000\\jenkins\\script\\UploadData1.au3
+    Run Keyword If    '${fileExists}' == 'True'    Run    C:\\000\\jenkins\\script\\UploadData1.exe
     Wait Until Created    C:\\temp\\zUpload\\TestOK.txt    50s
     Sleep    5s
     # The keyword (Handle Alert) does not detect the dialog box ("Upload 2 files to this site"), I use a script of AutoIT as a temporary solution
