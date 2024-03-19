@@ -424,7 +424,7 @@ Test09
 
 Test10
     [Documentation]    Click the button "CD-ROM" to import the data from the optical drive disc
-    [Tags]    CRITICALITY CRITICAL
+    [Tags]    CRITICALITY HIGH
     Wait Until Element Is Visible    id=selectDirButton    timeout=15s
     # I do not find any method to find and select the window "Open" with the keywords "Get Window Identifiers", "Get Window Handles", "Get Window Titles", "Get Title" and "Switch Window"
     # I installed and tested the keywords of robotframework-autoitlibrary without any success, probably it is not compatible with version 64-bit of Python
@@ -451,7 +451,7 @@ Test10
 
 Test11
     [Documentation]    Check that the fields of the form have been filled properly after importing DICOM files
-    [Tags]    CRITICALITY CRITICAL
+    [Tags]    CRITICALITY HIGH
     Wait Until Element Is Visible    id=patientFamilyNameField    timeout=15s
     Wait Until Keyword Succeeds    15s    3s    Textfield Value Should Be    id=gwt-uid-3    ${MyPatient6FamilyName}
     Wait Until Element Is Visible    id=patientGivenNameField    timeout=15s
@@ -485,7 +485,7 @@ Test12
 
 Test13
     [Documentation]    Click the button "Upload" to import the data to PACS server
-    [Tags]    CRITICALITY CRITICAL
+    [Tags]    CRITICALITY HIGH
     Wait Until Element Is Visible    id=uploadButton    timeout=15s
     Click Element    id=uploadButton
 
