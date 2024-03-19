@@ -429,7 +429,8 @@ Test10
     # I do not find any method to find and select the window "Open" with the keywords "Get Window Identifiers", "Get Window Handles", "Get Window Titles", "Get Title" and "Switch Window"
     # I installed and tested the keywords of robotframework-autoitlibrary without any success, probably it is not compatible with version 64-bit of Python
     Click Element    id=selectDirButton
-    Run    C:\\000\\jenkins\\script\\UploadData1.au3
+    # Run    C:\\000\\jenkins\\script\\UploadData1.au3
+    Run    C:\\000\\jenkins\\script\\UploadData1.exe
     Run Keyword And Ignore Error    Wait Until Created    C:\\temp\\zUpload\\TestOK.txt    50s
     ${fileExists} =    Run Keyword And Return Status    File Should Exist    C:\\temp\\zUpload\\TestFailed.txt
     Log    ${fileExists}
